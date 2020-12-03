@@ -31,7 +31,9 @@ export default class HttpServer {
         previewModeEncryptionKey: crypto.randomBytes(32).toString('hex')
       };
 
-      apiResolver(req, res, parsedQuery, this.handleRequest(), previewMode);
+      const propagateError = false;
+
+      apiResolver(req, res, parsedQuery, this.handleRequest(), previewMode, propagateError);
     });
   }
 
