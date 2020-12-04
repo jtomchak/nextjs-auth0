@@ -1,8 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "airbnb-base",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
@@ -11,6 +11,7 @@
   ],
   "env": {
     "node": true,
+    "browser": true,
     "jest": true
   },
   "settings": {
@@ -29,35 +30,15 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "indent": ["error", 2],
     "no-console": [1, {
       "allow": ["error", "info", "warn"]
     }],
     "max-len": ["error", 120],
     "comma-dangle": ["error", "never"],
     "no-trailing-spaces": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "/tests/*.ts",
-          "/tests/**/*.ts"
-        ]
-      }
-    ],
+    "react/display-name": 0,
     "semi": ["off"],
     "@typescript-eslint/semi": ["error"],
-    "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/prefer-interface": 0,
